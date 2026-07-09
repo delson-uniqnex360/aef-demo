@@ -26,14 +26,16 @@ export type Product = {
   attributes: ProductAttribute[];
 };
 
+// FIX: MenuItem must contain the SKU or extend Product for the search to work
 export type MenuItem = {
   name: string;
   path: string;
+  sku?: string; // Added SKU here so the tree can actually hold product references
 };
 
 export type MenuGroup = {
   title: string;
-  items: MenuItem[];
+  items: (MenuItem & Partial<Product>)[]; // Allows items to hold full product data
 };
 
 export type SubCategory = {

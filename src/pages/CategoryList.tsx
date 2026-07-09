@@ -60,9 +60,6 @@ export default function PopularCategories() {
         <h2 className="text-xl md:text-3xl font-extrabold tracking-tight text-[#14002a] uppercase">
           Popular Categories
         </h2>
-        <p className="text-sm text-gray-500 mt-2 font-normal">
-          Some small intro section about the categories
-        </p>
       </div>
 
       {/* Categories Grid System */}
@@ -72,12 +69,8 @@ export default function PopularCategories() {
 
           // Generate paths dynamically
           const mainSlug = formatSlug(category.title);
-          const firstSub = category.subCategories?.[0];
-          const subSlug = firstSub ? formatSlug(firstSub.title) : "";
 
-          const targetUrl = subSlug
-            ? `/category/${mainSlug}/${subSlug}`
-            : `/category/${mainSlug}`;
+          const targetUrl = `/category/${mainSlug}`;
 
           return (
             <Link
