@@ -1,0 +1,816 @@
+{
+  "data": [
+    {
+      "sku": "CTDX11",
+      "product_name": "Cat Drill Driver DX11 Brushless 18V 2 x 2.0Ah Li-ion Battery's",
+      "brand": "Cat",
+      "mpn": "CTDX11",
+      "categories": ["Powertools & Machines", "Cordless Power Tools", "Drills"],
+      "taxonomy": "Powertools & Machines > Cordless Power Tools > Drills",
+      "weight": "4.2, 2.4",
+      "weight_unit": "lbs",
+      "currency": "USD",
+      "images": [
+        "https://shopcaterpillar.com/cdn/shop/products/DX112_2000x.jpg?v=1778509361"
+      ],
+      "long_description": "This 18V Brushless 1/2″ Drill/Driver is built for the job site with a 2 speed gear box delivering 600 in/lbs. of torque with 0-600 RPM and 0-2000 RPM. 1/2″ all-metal ratcheting chuck for improved bit retention, LED light to illuminate darker areas, and ergonomic soft grip handle for a balanced feel. Included are (2) 2.0Ah batteries, 4A Quick charger, removable belt clip, and the only professional tools that come with a stackable storage case. Cat® power tools are backed by a 3 year warranty.",
+      "features": [
+        "High-efficiency BRUSHLESS motor delivers 25% more power, 50% more run time, and 10X longer life.",
+        "600 in/lbs. of Max Torque powers through the toughest applications.",
+        "2 Speeds in an all-metal gear case and 18 clutch settings provide versatility for any application.",
+        "Drill function bores through any material.",
+        "Includes Slide Lock Storage Case to easily store and transport."
+      ],
+      "attributes": [
+        {
+          "name": "Battery Voltage",
+          "value": "18",
+          "uom": "V"
+        },
+        {
+          "name": "Max. Energy of the Single Shot (EPTA)",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Maximum Impact Rate",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Max. Drilling Diameter (Concrete)",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Zero Load Speed",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Tool Holder Type",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Weight Without Battery Pack",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Hammer Drilling Concrete Vibration",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Uncertainty of Measurement K (Hammer Drilling)",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Chiseling",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Chiseling Vibration",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Sound Pressure Level",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Sound Power Level (LwA)",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Uncertainty of Measurement K (Noise)",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Number of Batteries Included",
+          "value": "2",
+          "uom": null
+        },
+        {
+          "name": "Product Range",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Supplied In",
+          "value": "Slide Lock Storage Case",
+          "uom": null
+        },
+        {
+          "name": "Tool Attachment",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Type of Battery Pack",
+          "value": "Li-ion",
+          "uom": null
+        },
+        {
+          "name": "Type of System Case",
+          "value": "Slide Lock Storage Case",
+          "uom": null
+        },
+        {
+          "name": "UN Number",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Impact Energy",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Voltage",
+          "value": "18",
+          "uom": "V"
+        },
+        {
+          "name": "Watt Hours (W/h)",
+          "value": "36",
+          "uom": null
+        },
+        {
+          "name": "Chuck Size",
+          "value": "0.5",
+          "uom": "in"
+        },
+        {
+          "name": "Max Torque",
+          "value": "600",
+          "uom": "in-lb"
+        },
+        {
+          "name": "No Load Speed",
+          "value": "0 to 2000",
+          "uom": "RPM"
+        },
+        {
+          "name": "Impact Rate",
+          "value": "0 to 32000",
+          "uom": "BPM"
+        },
+        {
+          "name": "# of Clutch Positions",
+          "value": "18+1",
+          "uom": null
+        },
+        {
+          "name": "Working Capacity",
+          "value": "1.625 in wood | 0.5 in metal",
+          "uom": "in"
+        },
+        {
+          "name": "Unit Weight",
+          "value": "4.2, 2.4",
+          "uom": "lbs"
+        },
+        {
+          "name": "Adjustable Torque",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Capacity of Battery Pack",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Chuck Capacity",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Chuck Material",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Chuck Span",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Drill - Steel",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Drill-Ø Masonry",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Drilling in Metal",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Drilling Ø Soft Wood",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Impact Drilling Concrete",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Max. Clamping Capacity",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Max. Drilling Diameter (Masonry)",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Max. Number of Percussion",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Max. Number of Strokes",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Max. RPM Empty",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Max. Torque (Hard Screw)",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Number of Torque Settings",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Spindle Opening",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Uncertainty of Measurement K (Drilling in Metal)",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Ø Drilling in Soft Wood",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Max Torque (Hard Screw)",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Scope of delivery",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Supplier number",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Uncertainty of measurement K",
+          "value": null,
+          "uom": null
+        }
+      ]
+    },
+    {
+      "sku": "479.314",
+      "product_name": "Flex Angle Grinder 125mm LE14-11125 4h 1400W 110V 5in Brushless Variable Speed",
+      "brand": "FLEX",
+      "mpn": "479.314",
+      "categories": [
+        "Powertools & Machines",
+        "Cordless Power Tools",
+        "Grinders"
+      ],
+      "taxonomy": "Powertools & Machines > Cordless Power Tools > Grinders",
+      "currency": "USD",
+      "images": [],
+      "long_description": "The Flex LE 14-11 125 small angle grinder delivers 12 amp corded power with a 5-stage variable speed dial to match RPM to the job. Designed with long-life motor technology and built-in protections including soft start, restart protection, and overload protection, it is a durable option for grinding and cutting applications using 4-1/2 in. to 5 in. wheels.",
+      "features": [
+        "12 amp small angle grinder for grinding and cutting applications",
+        "Accepts 4-1/2 in. and 5 in. wheels",
+        "5-stage variable speed dial to match speed to application",
+        "Variable speed range: 2,800 to 11,500 RPM (no-load)",
+        "Soft start for controlled start-up",
+        "Restart protection helps prevent accidental starts after power interruption",
+        "Overload protection monitors motor temperature to help protect the tool",
+        "Tool-free adjustable guard for quick repositioning",
+        "Long-life motor technology designed to extend brush service life",
+        "Side switch design"
+      ],
+      "attributes": [
+        {
+          "name": "No-Load Speed",
+          "value": "2800 to 11500",
+          "uom": "RPM"
+        },
+        {
+          "name": "Restart Protection",
+          "value": "Yes",
+          "uom": null
+        },
+        {
+          "name": "Amperage",
+          "value": "12",
+          "uom": "amp"
+        },
+        {
+          "name": "Wheel Diameter Compatibility",
+          "value": "4.5 to 5",
+          "uom": "in"
+        },
+        {
+          "name": "Speed Settings",
+          "value": "5-stage variable speed dial",
+          "uom": null
+        },
+        {
+          "name": "Switch Type",
+          "value": "Side Switch",
+          "uom": null
+        },
+        {
+          "name": "Soft Start",
+          "value": "Yes",
+          "uom": null
+        },
+        {
+          "name": "Overload Protection",
+          "value": "Yes",
+          "uom": null
+        },
+        {
+          "name": "Guard",
+          "value": "Tool-Free Adjustable Guard",
+          "uom": null
+        }
+      ]
+    },
+    {
+      "sku": "606469390",
+      "product_name": "Metabo Angle Grinder WE24-230 2400W 110V 9in",
+      "brand": "METABO",
+      "mpn": "606469390",
+      "categories": [
+        "Powertools & Machines",
+        "Cordless Power Tools",
+        "Grinders"
+      ],
+      "taxonomy": "Powertools & Machines > Cordless Power Tools > Grinders",
+      "weight": "5.8",
+      "weight_unit": "kg",
+      "currency": "USD",
+      "warranty": "1 year manufacturer's warranty",
+      "images": [],
+      "long_description": "Metabo 606469390 W 24-230C MVT 110V 9 In. Angle Grinder (230mm), Deadman's Switch, 2300W is a product engineered with precision, delivering exceptional performance with features like metabo Marathon motor with patented dust protection for long service life, electronic safety shutdown reduces kickback if the disc stops unexpectedly for high user safety and deadman's switch for high user protection.",
+      "features": [
+        "Metabo Marathon motor with patented dust protection for long service life",
+        "Electronic safety shutdown: reduces kickback if the disc stops unexpectedly - for high user safety",
+        "Deadman's switch for high user protection",
+        "Rotating back handle and side handle can be mounted at 3 positions for optimum handle position also when cutting",
+        "Tool-free adjustable guard; twist-proof",
+        "Starting current limitation prevents the actuation of the lock on start-up",
+        "Electronic overload protection and restart protection",
+        "Metabo VibraTech (MVT): integrated damping system and side handle to reduce vibrations in order to protect the user’s health",
+        "Metabo safety switch prevents unintentional start",
+        "Auto-stop carbon brushes to protect the motor, LED signal indicates triggered restart protection or overheating"
+      ],
+      "attributes": [
+        {
+          "name": "Disc Diameter",
+          "value": "230",
+          "uom": "mm"
+        },
+        {
+          "name": "Rated Input Power",
+          "value": "2300",
+          "uom": "W"
+        },
+        {
+          "name": "Output power",
+          "value": "1600",
+          "uom": "W"
+        },
+        {
+          "name": "No-Load Speed",
+          "value": "6600",
+          "uom": "rpm"
+        },
+        {
+          "name": "Speed at Rated Load",
+          "value": "4600",
+          "uom": "RPM"
+        },
+        {
+          "name": "Torque",
+          "value": "17",
+          "uom": "Nm"
+        },
+        {
+          "name": "Spindle Thread",
+          "value": "M 14",
+          "uom": null
+        },
+        {
+          "name": "Handle Circumference",
+          "value": "144",
+          "uom": "mm"
+        },
+        {
+          "name": "Weight (without power cable)",
+          "value": "5.8",
+          "uom": "kg"
+        },
+        {
+          "name": "Cable length",
+          "value": "4",
+          "uom": "m"
+        },
+        {
+          "name": "Vibration (Surface Grinding)",
+          "value": "6.2",
+          "uom": "m/s²"
+        },
+        {
+          "name": "Vibration Uncertainty of Measurement K (Surface Grinding)",
+          "value": "3",
+          "uom": "dB(A)"
+        },
+        {
+          "name": "Vibration (Grinding with Sandpaper)",
+          "value": "2.5",
+          "uom": "m/s²"
+        },
+        {
+          "name": "Vibration Uncertainty of Measurement K (Grinding with Sandpaper)",
+          "value": "1.5",
+          "uom": "m/s²"
+        },
+        {
+          "name": "Noise Emission Sound Pressure Level",
+          "value": "94",
+          "uom": "dB(A)"
+        },
+        {
+          "name": "Noise Emission Sound Power Level (LwA)",
+          "value": "105",
+          "uom": "dB(A)"
+        },
+        {
+          "name": "Noise Emission Uncertainty of Measurement K",
+          "value": "3",
+          "uom": "dB(A)"
+        },
+        {
+          "name": "Power Source",
+          "value": "Corded",
+          "uom": null
+        },
+        {
+          "name": "Voltage",
+          "value": "110",
+          "uom": "V"
+        },
+        {
+          "name": "Blade Size (Imperial)",
+          "value": "9",
+          "uom": "in"
+        },
+        {
+          "name": "Revolutions at Rated Load",
+          "value": "4600",
+          "uom": "RPM"
+        },
+        {
+          "name": "Grinding Wheel Diameter",
+          "value": "230",
+          "uom": "mm"
+        },
+        {
+          "name": "Restart Protection",
+          "value": "Yes",
+          "uom": null
+        },
+        {
+          "name": "Switch Type",
+          "value": "Deadman's switch",
+          "uom": null
+        },
+        {
+          "name": "Soft Start",
+          "value": "Yes",
+          "uom": null
+        },
+        {
+          "name": "Overload Protection",
+          "value": "Yes",
+          "uom": null
+        },
+        {
+          "name": "Guard",
+          "value": "Tool-free adjustable guard; twist-proof",
+          "uom": null
+        },
+        {
+          "name": "Noise Emission Uncertainty of Measurement K (Sound Power)",
+          "value": "3",
+          "uom": "dB(A)"
+        },
+        {
+          "name": "No Load Speed",
+          "value": "6600",
+          "uom": "RPM"
+        }
+      ]
+    },
+    {
+      "sku": "602029850",
+      "product_name": "Metabo Compact Vacuum Cleaner AS18 HEPA PC Body Only",
+      "brand": "METABO",
+      "mpn": "602029850",
+      "categories": [
+        "Powertools & Machines",
+        "Cordless Power Tools",
+        "Vacuum, Extraction & Clenaing"
+      ],
+      "taxonomy": "Powertools & Machines > Vacuum, Extraction & Cleaning > Cordless Vacuums",
+      "weight": "4.8",
+      "weight_unit": "kg",
+      "currency": "USD",
+      "warranty": "1 year manufacturer's warranty",
+      "images": [
+        "https://be.prod.metabo.com/product/products/cas_image_website.png"
+      ],
+      "long_description": "Equipped with HEPA filter, keeps back 99.95% of fine dusts. PressClean: manual filter cleaning using strong air flow by activating the switch on the extraction unit during breaks. Eco mode for longer runtime per battery pack charge, boost mode for maximum power. With integrated blow function for blowing out, drying and drawing off exhaust air. Dust-proof and splash-proof battery pack compartment with lockable flap.",
+      "features": [
+        "Stretchy suction hose (Ø 32 mm / 0.5-2.5 m)",
+        "3 Plastic suction tubes",
+        "HEPA flat pleated filter",
+        "Suction nozzle (120 mm wide)",
+        "Coupling bush internal Ø 28 mm / external Ø 35 mm",
+        "without battery pack, without charger"
+      ],
+      "attributes": [
+        {
+          "name": "Air Flow",
+          "value": "2100",
+          "uom": "l/min"
+        },
+        {
+          "name": "Air Output Max.",
+          "value": "3300",
+          "uom": "l/min"
+        },
+        {
+          "name": "Battery Voltage",
+          "value": "18",
+          "uom": "V"
+        },
+        {
+          "name": "Container Volume",
+          "value": "6",
+          "uom": "l"
+        },
+        {
+          "name": "Dust Class",
+          "value": "M",
+          "uom": null
+        },
+        {
+          "name": "Filtering Surface",
+          "value": "3000",
+          "uom": "cm²"
+        },
+        {
+          "name": "Length of the Hose",
+          "value": "2.5",
+          "uom": "m"
+        },
+        {
+          "name": "Mains Powered",
+          "value": "No",
+          "uom": null
+        },
+        {
+          "name": "Maximum Vacuum",
+          "value": "120",
+          "uom": "hPa"
+        },
+        {
+          "name": "Motor Power",
+          "value": "100",
+          "uom": "W"
+        },
+        {
+          "name": "Number of Batteries Included",
+          "value": "0",
+          "uom": null
+        },
+        {
+          "name": "Suction Hose Diameter",
+          "value": "32",
+          "uom": "mm"
+        },
+        {
+          "name": "Supplied In",
+          "value": "Cardboard box",
+          "uom": null
+        },
+        {
+          "name": "Vacuum Cleaner Type",
+          "value": "Wet and dry vacuum cleaner",
+          "uom": null
+        },
+        {
+          "name": "Weight Without Battery Pack",
+          "value": "3.8",
+          "uom": "kg"
+        },
+        {
+          "name": "Wheeled",
+          "value": "No",
+          "uom": null
+        },
+        {
+          "name": "Boost mode",
+          "value": "Yes",
+          "uom": null
+        },
+        {
+          "name": "Commercial approval for dust class H",
+          "value": "Yes",
+          "uom": null
+        },
+        {
+          "name": "Dust-proof and splash-proof battery pack compartment",
+          "value": "Yes",
+          "uom": null
+        },
+        {
+          "name": "Eco mode",
+          "value": "Yes",
+          "uom": null
+        },
+        {
+          "name": "Integrated blow function",
+          "value": "Yes",
+          "uom": null
+        },
+        {
+          "name": "Manual filter cleaning",
+          "value": "Yes",
+          "uom": null
+        },
+        {
+          "name": "Wet and dry vacuum cleaning",
+          "value": "Yes",
+          "uom": null
+        }
+      ]
+    },
+    {
+      "sku": "CTDX31B.1",
+      "product_name": "Cat Angle Grinder 125mm Brushless 18V 5in Body Only",
+      "brand": "Cat",
+      "mpn": "CTDX31B.1",
+      "categories": [
+        "Powertools & Machines",
+        "Cordless Power Tools",
+        "Grinders"
+      ],
+      "taxonomy": "Powertools & Machines > Cordless Power Tools > Grinders",
+      "weight": null,
+      "weight_unit": null,
+      "currency": "USD",
+      "warranty": null,
+      "images": [],
+      "long_description": "Powerful cordless Angle Grinder with high performance in common applications. CAT latest Brushless motor and intelligence PCM system delivers advanced digital overload protection and enhances working performance and maximum run time. Slim body with non-lockable safety paddle switch for comfortable user grip experience. Compact gear case for increased access to tight spaces. Unique tool-free 2in1 wheel guard for quick and easy guard adjustments. Mesh filters and sealed PCM prevents ingress of dust particles to prolong tool lifetime. Battery capacity indicator to check battery energy time remaining. Brushless motor for increased efficiency & lifetime Anti-vibration auxiliary handle for comfort and long time use Tool-less 2in1 guard adjustment.",
+      "features": [
+        "Powerful cordless Angle Grinder with high performance in common applications.",
+        "CAT latest Brushless motor and intelligence PCM system delivers advanced digital overload protection and enhances working performance and maximum run time.",
+        "Slim body with non-lockable safety paddle switch for comfortable user grip experience.",
+        "Compact gear case for increased access to tight spaces.",
+        "Unique tool-free 2in1 wheel guard for quick and easy guard adjustments.",
+        "Mesh filters and sealed PCM prevents ingress of dust particles to prolong tool lifetime.",
+        "Battery capacity indicator to check battery energy time remaining.",
+        "Brushless motor for increased efficiency & lifetime.",
+        "Anti-vibration auxiliary handle for comfort and long time use.",
+        "Tool-less 2in1 guard adjustment"
+      ],
+      "attributes": [
+        {
+          "name": "Motor Type",
+          "value": "Brushless",
+          "uom": null
+        },
+        {
+          "name": "Battery Voltage",
+          "value": "18",
+          "uom": "V"
+        },
+        {
+          "name": "Disc Size",
+          "value": "125",
+          "uom": "mm"
+        },
+        {
+          "name": "Safety Switch Type",
+          "value": "Non-lockable Safety Paddle Switch",
+          "uom": null
+        },
+        {
+          "name": "Gear Case Type",
+          "value": "Compact Gear Case",
+          "uom": null
+        },
+        {
+          "name": "Guard Adjustment",
+          "value": "Tool-less 2in1 Guard Adjustment",
+          "uom": null
+        },
+        {
+          "name": "Dust Protection",
+          "value": "Mesh Filters and Sealed PCM",
+          "uom": null
+        },
+        {
+          "name": "Battery Indicator",
+          "value": "Battery Capacity Indicator",
+          "uom": null
+        },
+        {
+          "name": "Anti-vibration Handle",
+          "value": "Anti-vibration Auxiliary Handle",
+          "uom": null
+        },
+        {
+          "name": "Power Source",
+          "value": "Cordless",
+          "uom": null
+        },
+        {
+          "name": "Voltage",
+          "value": "18",
+          "uom": "V"
+        },
+        {
+          "name": "Blade Size (Imperial)",
+          "value": "5",
+          "uom": "in"
+        },
+        {
+          "name": "Disc Diameter",
+          "value": "125",
+          "uom": "mm"
+        },
+        {
+          "name": "Switch Type",
+          "value": "Paddle Switch",
+          "uom": null
+        },
+        {
+          "name": "Overload Protection",
+          "value": "Advanced Digital Overload Protection",
+          "uom": null
+        },
+        {
+          "name": "Anti-vibration Auxiliary Handle",
+          "value": "Anti-vibration Auxiliary Handle",
+          "uom": null
+        },
+        {
+          "name": "Tool-less Adjustable Guard",
+          "value": "Tool-free 2in1 Wheel Guard",
+          "uom": null
+        }
+      ]
+    }
+  ]
+}
