@@ -19,7 +19,6 @@ export default function MegaMenu() {
       })
       .then((rawData) => {
         const products = Array.isArray(rawData) ? rawData : rawData.data || [];
-
         setMenuData(buildCategoryTree(products));
         setLoading(false);
       })
@@ -41,6 +40,13 @@ export default function MegaMenu() {
     const mainSlug = formatSlug(category.title);
     navigate(`/category/${mainSlug}`);
 
+    // Guard clause: If there are no subcategories, do not open the dropdown menu
+    if (!category.subCategories || category.subCategories.length === 0) {
+      setActiveMain(null);
+      setActiveSub(null);
+      return;
+    }
+
     if (activeMain?.id === category.id) {
       setActiveMain(null);
       setActiveSub(null);
@@ -48,12 +54,7 @@ export default function MegaMenu() {
     }
 
     setActiveMain(category);
-
-    if (category.subCategories.length > 0) {
-      setActiveSub(category.subCategories[0]);
-    } else {
-      setActiveSub(null);
-    }
+    setActiveSub(category.subCategories[0]);
   };
 
   const handleSubClick = (
@@ -91,53 +92,61 @@ export default function MegaMenu() {
 
   return (
     <div className="relative w-full z-50 select-none">
-      {/* Level 1 */}
+      {/* Level 1 Navigation */}
       <nav className="w-full bg-[#14002a] text-white px-4 py-3 border-b border-gray-200">
-        {/* Change this line in your Level 1 <nav> container */}
+        {/* Added arbitrary variants to hide the horizontal scrollbar cross-browser */}
         <div className="max-w-[1600px] mx-auto flex items-center gap-8 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-          {" "}
           {menuData.map((mainCat) => {
             const isOpen = activeMain?.id === mainCat.id;
+            const hasNoSubs =
+              !mainCat.subCategories || mainCat.subCategories.length === 0;
 
             return (
               <button
                 key={mainCat.id}
                 onClick={() => handleMainClick(mainCat)}
+                disabled={hasNoSubs}
                 className={`flex items-center gap-2 whitespace-nowrap text-xs font-semibold border-b-2 py-1 transition-colors ${
-                  isOpen
-                    ? "border-[#ff6a00] text-[#ff6a00]"
-                    : "border-transparent hover:text-orange-400"
+                  hasNoSubs
+                    ? "cursor-default opacity-70 border-transparent"
+                    : isOpen
+                      ? "border-[#ff6a00] text-[#ff6a00]"
+                      : "border-transparent hover:text-orange-400"
                 }`}
               >
                 <span>{mainCat.title}</span>
 
-                <svg
-                  className={`w-3 h-3 transition-transform ${
-                    isOpen ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  />
-                </svg>
+                {/* Only render arrow if there are subcategories to display */}
+                {!hasNoSubs && (
+                  <svg
+                    className={`w-3 h-3 transition-transform ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                )}
               </button>
             );
           })}
         </div>
       </nav>
 
+      {/* Multi-Level Dropdown Overlay */}
       {activeMain && activeMain.subCategories.length > 0 && (
         <div
           className="absolute left-0 w-full bg-white shadow-2xl border-b border-gray-200 flex"
           style={{ minHeight: 420 }}
         >
-          {/* Level 2 */}
+          {/* Level 2 Subcategories */}
           <div className="w-64 border-r border-gray-200 bg-white">
             {activeMain.subCategories.map((subCat) => {
               const active = activeSub?.id === subCat.id;
@@ -173,7 +182,7 @@ export default function MegaMenu() {
             })}
           </div>
 
-          {/* Level 3 & Brands */}
+          {/* Level 3 Groups & Brands */}
           <div className="flex-1 p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 overflow-y-auto max-h-[550px]">
             {activeSub?.groups.map((group, index) => (
               <div key={index}>
@@ -202,6 +211,7 @@ export default function MegaMenu() {
         </div>
       )}
 
+      {/* Click-away Backdrop Layer */}
       {activeMain && (
         <div
           className="fixed inset-0 bg-black/10 -z-10"
