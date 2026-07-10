@@ -22,7 +22,7 @@
         "/Image - Download/CTDX11/9.avif",
         "https://shopcaterpillar.com/cdn/shop/products/DX112_2000x.jpg?v=1778509361"
       ],
-      "documents": ["/pdfs/602029850/DataSheet.pdf"],
+      "documents": ["/pdfs/sample.pdf"],
       "long_description": "This 18V Brushless 1/2″ Drill/Driver is built for the job site with a 2 speed gear box delivering 600 in/lbs. of torque with 0-600 RPM and 0-2000 RPM. 1/2″ all-metal ratcheting chuck for improved bit retention, LED light to illuminate darker areas, and ergonomic soft grip handle for a balanced feel. Included are (2) 2.0Ah batteries, 4A Quick charger, removable belt clip, and the only professional tools that come with a stackable storage case. Cat® power tools are backed by a 3 year warranty.",
       "features": [
         "High-efficiency BRUSHLESS motor delivers 25% more power, 50% more run time, and 10X longer life.",
@@ -38,118 +38,8 @@
           "uom": "V"
         },
         {
-          "name": "Max. Energy of the Single Shot (EPTA)",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Maximum Impact Rate",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Max. Drilling Diameter (Concrete)",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Zero Load Speed",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Tool Holder Type",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Weight Without Battery Pack",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Hammer Drilling Concrete Vibration",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Uncertainty of Measurement K (Hammer Drilling)",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Chiseling",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Chiseling Vibration",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Sound Pressure Level",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Sound Power Level (LwA)",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Uncertainty of Measurement K (Noise)",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Number of Batteries Included",
-          "value": "2",
-          "uom": null
-        },
-        {
-          "name": "Product Range",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Supplied In",
-          "value": "Slide Lock Storage Case",
-          "uom": null
-        },
-        {
-          "name": "Tool Attachment",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Type of Battery Pack",
-          "value": "Li-ion",
-          "uom": null
-        },
-        {
-          "name": "Type of System Case",
-          "value": "Slide Lock Storage Case",
-          "uom": null
-        },
-        {
-          "name": "UN Number",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Impact Energy",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Voltage",
-          "value": "18",
-          "uom": "V"
-        },
-        {
-          "name": "Watt Hours (W/h)",
-          "value": "36",
+          "name": "# of Clutch Positions",
+          "value": "18+1",
           "uom": null
         },
         {
@@ -158,14 +48,24 @@
           "uom": "in"
         },
         {
+          "name": "Working Capacity",
+          "value": "1.625 in wood | 0.5 in metal",
+          "uom": "in"
+        },
+        {
+          "name": "No Load Speed",
+          "value": "0 - 2000",
+          "uom": "RPM"
+        },
+        {
           "name": "Max Torque",
           "value": "600",
           "uom": "in-lb"
         },
         {
-          "name": "No Load Speed",
-          "value": "0 to 2000",
-          "uom": "RPM"
+          "name": "Watt Hours (W/h)",
+          "value": "36",
+          "uom": null
         },
         {
           "name": "Impact Rate",
@@ -173,139 +73,40 @@
           "uom": "BPM"
         },
         {
-          "name": "# of Clutch Positions",
-          "value": "18+1",
+          "name": "Number of Batteries Included",
+          "value": "2",
           "uom": null
         },
         {
-          "name": "Working Capacity",
-          "value": "1.625 in wood | 0.5 in metal",
-          "uom": "in"
+          "name": "Supplied In",
+          "value": "Slide Lock Storage Case",
+          "uom": null
         },
         {
-          "name": "Unit Weight",
-          "value": "4.2, 2.4",
+          "name": "Type of Battery Pack",
+          "value": "Li-ion",
+          "uom": null
+        },
+
+        {
+          "name": "Type of System Case",
+          "value": "Slide Lock Storage Case",
+          "uom": null
+        },
+        {
+          "name": "Max. Energy of the Single Shot (EPTA)",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Unit Weight with Battery",
+          "value": "4.2",
           "uom": "lbs"
         },
         {
-          "name": "Adjustable Torque",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Capacity of Battery Pack",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Chuck Capacity",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Chuck Material",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Chuck Span",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Drill - Steel",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Drill-Ø Masonry",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Drilling in Metal",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Drilling Ø Soft Wood",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Impact Drilling Concrete",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Max. Clamping Capacity",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Max. Drilling Diameter (Masonry)",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Max. Number of Percussion",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Max. Number of Strokes",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Max. RPM Empty",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Max. Torque (Hard Screw)",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Number of Torque Settings",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Spindle Opening",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Uncertainty of Measurement K (Drilling in Metal)",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Ø Drilling in Soft Wood",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Max Torque (Hard Screw)",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Scope of delivery",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Supplier number",
-          "value": null,
-          "uom": null
-        },
-        {
-          "name": "Uncertainty of measurement K",
-          "value": null,
-          "uom": null
+          "name": "Unit Weight without Battery",
+          "value": "2.4",
+          "uom": "lbs"
         }
       ]
     },
@@ -322,7 +123,7 @@
       "taxonomy": "Powertools & Machines > Cordless Power Tools > Grinders",
       "currency": "EUR",
       "images": ["/Image - Download/479.314/1.jpg"],
-      "documents": ["/pdfs/602029850/DataSheet.pdf"],
+      "documents": ["/pdfs/sample.pdf"],
       "long_description": "The Flex LE 14-11 125 small angle grinder delivers 12 amp corded power with a 5-stage variable speed dial to match RPM to the job. Designed with long-life motor technology and built-in protections including soft start, restart protection, and overload protection, it is a durable option for grinding and cutting applications using 4-1/2 in. to 5 in. wheels.",
       "features": [
         "12 amp small angle grinder for grinding and cutting applications",
@@ -395,8 +196,8 @@
         "Grinders"
       ],
       "taxonomy": "Powertools & Machines > Cordless Power Tools > Grinders",
-      "weight": "5.8",
-      "weight_unit": "kg",
+      "weight": null,
+      "weight_unit": null,
       "currency": "EUR",
       "warranty": "1 year manufacturer's warranty",
       "images": [
@@ -408,8 +209,8 @@
         "/Image - Download/606469390/1.webp"
       ],
       "documents": [
-        "/pdfs/602029850/DataSheet.pdf",
-        "/pdfs/602029850/Operating_Instructions.pdf"
+        "/pdfs/602029850/DataSheet_1.pdf",
+        "/pdfs/602029850/DataSheet_2.pdf"
       ],
       "long_description": "Metabo 606469390 W 24-230C MVT 110V 9 In. Angle Grinder (230mm), Deadman's Switch, 2300W is a product engineered with precision, delivering exceptional performance with features like metabo Marathon motor with patented dust protection for long service life, electronic safety shutdown reduces kickback if the disc stops unexpectedly for high user safety and deadman's switch for high user protection.",
       "features": [
@@ -526,11 +327,6 @@
           "uom": "in"
         },
         {
-          "name": "Revolutions at Rated Load",
-          "value": "4600",
-          "uom": "RPM"
-        },
-        {
           "name": "Grinding Wheel Diameter",
           "value": "230",
           "uom": "mm"
@@ -564,11 +360,6 @@
           "name": "Noise Emission Uncertainty of Measurement K (Sound Power)",
           "value": "3",
           "uom": "dB(A)"
-        },
-        {
-          "name": "No Load Speed",
-          "value": "6600",
-          "uom": "RPM"
         }
       ]
     },
@@ -742,7 +533,7 @@
         "/Image - Download/CTDX31B.1/1.png",
         "/Image - Download/CTDX31B.1/2.png"
       ],
-      "documents": ["/pdfs/602029850/DataSheet.pdf"],
+      "documents": ["/pdfs/sample.pdf"],
       "long_description": "Powerful cordless Angle Grinder with high performance in common applications. CAT latest Brushless motor and intelligence PCM system delivers advanced digital overload protection and enhances working performance and maximum run time. Slim body with non-lockable safety paddle switch for comfortable user grip experience. Compact gear case for increased access to tight spaces. Unique tool-free 2in1 wheel guard for quick and easy guard adjustments. Mesh filters and sealed PCM prevents ingress of dust particles to prolong tool lifetime. Battery capacity indicator to check battery energy time remaining. Brushless motor for increased efficiency & lifetime Anti-vibration auxiliary handle for comfort and long time use Tool-less 2in1 guard adjustment.",
       "features": [
         "Powerful cordless Angle Grinder with high performance in common applications.",
@@ -858,7 +649,7 @@
         "https://be.prod.metabo.com/product/products/8970/image-thumb__8970__product_detail-desktop/0156400S_51_website.cc22bd1e.webp",
         "https://youtu.be/3igpcQ8Gfno"
       ],
-      "documents": ["/pdfs/602029850/DataSheet.pdf"],
+      "documents": ["/pdfs/sample.pdf"],
       "long_description": "The Metabo DKG 80/16 (601564500) is a lightweight pneumatic staple gun designed for fast, accurate fastening in professional woodworking, upholstery, and insulation applications. It is ideal for securing foils, fabrics, insulation materials, and other lightweight materials with consistent performance. Its ergonomic composite housing provides excellent grip, reduced vibration, and thermal insulation, ensuring comfortable operation during extended use.",
       "features": [
         "For processing staples",

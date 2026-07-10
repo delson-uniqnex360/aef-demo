@@ -131,17 +131,19 @@ export default function ProductDetailPage() {
           {/* Left Column: Modern Media Gallery */}
           <div className="lg:col-span-7 space-y-4">
             {/* Main Stage View with Overlay Navigation Arrows */}
-            <div className="relative group/main bg-white border border-gray-50 rounded-2xl overflow-hidden aspect-video flex items-center justify-center p-6 shadow-sm">
-              {/* Left Arrow Button */}
+            <div className="relative group/main bg-white border border-gray-50 rounded-2xl overflow-hidden aspect-video flex items-center justify-center p-0 shadow-sm">
+              {/* Left Arrow Button (Circular Loop) */}
               <button
                 onClick={() => {
                   const currentIndex = product.images.indexOf(selectedMedia);
-                  if (currentIndex > 0) {
-                    setSelectedMedia(product.images[currentIndex - 1]);
-                  }
+                  // If at the beginning, wrap around to the end of the array
+                  const prevIndex =
+                    currentIndex <= 0
+                      ? product.images.length - 1
+                      : currentIndex - 1;
+                  setSelectedMedia(product.images[prevIndex]);
                 }}
-                disabled={product.images.indexOf(selectedMedia) <= 0}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/80 backdrop-blur-md border border-gray-50/50 rounded-full shadow-md text-gray-700 opacity-0 group-hover/main:opacity-100 disabled:pointer-events-none disabled:opacity-0 transition-all duration-200 hover:bg-white hover:scale-105 active:scale-95"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/80 backdrop-blur-md border border-gray-50/50 rounded-full shadow-md text-gray-700 opacity-0 group-hover/main:opacity-100 transition-all duration-200 hover:bg-white hover:scale-105 active:scale-95"
                 aria-label="Previous media"
               >
                 <svg
@@ -172,23 +174,22 @@ export default function ProductDetailPage() {
                 <img
                   src={selectedMedia || "/placeholder-image.jpg"}
                   alt={product.product_name}
-                  className="max-h-full max-w-full object-contain"
+                  className="w-full h-full object-contain"
                 />
               )}
 
-              {/* Right Arrow Button */}
+              {/* Right Arrow Button (Circular Loop) */}
               <button
                 onClick={() => {
                   const currentIndex = product.images.indexOf(selectedMedia);
-                  if (currentIndex < product.images.length - 1) {
-                    setSelectedMedia(product.images[currentIndex + 1]);
-                  }
+                  // If at the end, wrap around to the first item
+                  const nextIndex =
+                    currentIndex === product.images.length - 1
+                      ? 0
+                      : currentIndex + 1;
+                  setSelectedMedia(product.images[nextIndex]);
                 }}
-                disabled={
-                  product.images.indexOf(selectedMedia) ===
-                  product.images.length - 1
-                }
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/80 backdrop-blur-md border border-gray-50/50 rounded-full shadow-md text-gray-700 opacity-0 group-hover/main:opacity-100 disabled:pointer-events-none disabled:opacity-0 transition-all duration-200 hover:bg-white hover:scale-105 active:scale-95"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/80 backdrop-blur-md border border-gray-50/50 rounded-full shadow-md text-gray-700 opacity-0 group-hover/main:opacity-100 transition-all duration-200 hover:bg-white hover:scale-105 active:scale-95"
                 aria-label="Next media"
               >
                 <svg
@@ -215,7 +216,7 @@ export default function ProductDetailPage() {
                   <button
                     key={index}
                     onClick={() => setSelectedMedia(media)}
-                    className={`w-24 h-20 flex-shrink-0 border rounded-xl overflow-hidden bg-white snap-start relative flex items-center justify-center p-1 transition-all ${
+                    className={`w-24 h-20 flex-shrink-0 border rounded-xl overflow-hidden bg-white snap-start relative flex items-center justify-center p-0 transition-all ${
                       selectedMedia === media
                         ? "border-orange-600 ring-2 ring-orange-100"
                         : "border-gray-50 hover:border-gray-200"
@@ -236,7 +237,7 @@ export default function ProductDetailPage() {
                       <img
                         src={media}
                         alt={`Thumbnail ${index}`}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-cover"
                       />
                     )}
                   </button>
@@ -343,16 +344,7 @@ export default function ProductDetailPage() {
             >
               Technical Information
             </button>
-            <button
-              onClick={() => setActiveTab("reviews")}
-              className={`px-6 py-3.5 text-sm font-bold tracking-wide rounded-t-xl transition-all border-t-2 -mb-px ${
-                activeTab === "reviews"
-                  ? "bg-white border-orange-600 text-orange-600 shadow-sm"
-                  : "border-transparent text-gray-500 hover:text-gray-900 hover:bg-gray-100/50"
-              }`}
-            >
-              Reviews
-            </button>
+
             <button
               onClick={() => setActiveTab("documents")}
               className={`px-6 py-3.5 text-sm font-bold tracking-wide rounded-t-xl transition-all border-t-2 -mb-px ${
@@ -362,6 +354,17 @@ export default function ProductDetailPage() {
               }`}
             >
               Documents
+            </button>
+
+            <button
+              onClick={() => setActiveTab("reviews")}
+              className={`px-6 py-3.5 text-sm font-bold tracking-wide rounded-t-xl transition-all border-t-2 -mb-px ${
+                activeTab === "reviews"
+                  ? "bg-white border-orange-600 text-orange-600 shadow-sm"
+                  : "border-transparent text-gray-500 hover:text-gray-900 hover:bg-gray-100/50"
+              }`}
+            >
+              Reviews
             </button>
           </div>
 
@@ -396,29 +399,44 @@ export default function ProductDetailPage() {
 
             {activeTab === "technical" && (
               <div className="space-y-8 max-w-4xl">
-                {product.attributes && product.attributes.length > 0 ? (
+                {/* Filter out attributes that have no valid value before checking length */}
+                {(product.attributes &&
+                  product.attributes.filter(
+                    (attr: any) =>
+                      attr.value !== null &&
+                      attr.value !== undefined &&
+                      attr.value !== "",
+                  ).length > 0) ||
+                product.weight ? (
                   <div>
                     <div className="border border-gray-50 rounded-xl overflow-hidden shadow-sm">
                       <table className="w-full text-left text-sm border-collapse">
                         <tbody className="divide-y divide-gray-100">
-                          {product.attributes.map((attr: any, idx: number) => (
-                            <tr
-                              key={idx}
-                              className="hover:bg-gray-50/50 transition-colors"
-                            >
-                              <td className="px-6 py-4 font-semibold text-gray-700 capitalize">
-                                {attr.name.replace(/_/g, " ")}
-                              </td>
-                              <td className="px-6 py-4 text-gray-600">
-                                {attr.value ?? ""}{" "}
-                                {attr.uom && (
-                                  <span className="text-xs text-gray-400 ml-0.5">
-                                    {attr.uom}
-                                  </span>
-                                )}
-                              </td>
-                            </tr>
-                          ))}
+                          {product.attributes
+                            ?.filter(
+                              (attr: any) =>
+                                attr.value !== null &&
+                                attr.value !== undefined &&
+                                attr.value !== "",
+                            )
+                            .map((attr: any, idx: number) => (
+                              <tr
+                                key={idx}
+                                className="hover:bg-gray-50/50 transition-colors"
+                              >
+                                <td className="px-6 py-4 font-semibold text-gray-700 capitalize">
+                                  {attr.name.replace(/_/g, " ")}
+                                </td>
+                                <td className="px-6 py-4 text-gray-600">
+                                  {attr.value}{" "}
+                                  {attr.uom && (
+                                    <span className="text-xs text-gray-400 ml-0.5">
+                                      {attr.uom}
+                                    </span>
+                                  )}
+                                </td>
+                              </tr>
+                            ))}
 
                           {product.weight && (
                             <tr className="hover:bg-gray-50/50 transition-colors">
