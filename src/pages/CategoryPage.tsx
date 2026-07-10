@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { buildCategoryTree } from "../api/category";
+import AppTaxonomy from "../components/AppTaxonomy";
 import type { MainCategory } from "../types/Product";
 
 export default function CategoryPage() {
@@ -41,7 +42,7 @@ export default function CategoryPage() {
 
   // Change 3 & Bug Fix: Pointing to raw data structure (.images array)
   const getDynamicCategoryImage = (obj: any): string => {
-    console.log("image obj", obj)
+    console.log("image obj", obj);
     const fallbackImage =
       "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=500&auto=format&fit=crop";
 
@@ -187,6 +188,9 @@ export default function CategoryPage() {
   return (
     <section className="max-w-[1200px] mx-auto px-4 py-16 bg-white">
       {/* Dynamic Section Header */}
+      <div>
+        <AppTaxonomy />
+      </div>
       <div className="text-center mb-10">
         <h2 className="text-xl md:text-3xl font-extrabold tracking-tight text-[#14002a] uppercase">
           {currentTitle}

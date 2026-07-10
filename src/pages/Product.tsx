@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { buildCategoryTree } from "../api/category";
 import { getProductsByFlexLevel } from "../api/product";
+import AppTaxonomy from "../components/AppTaxonomy";
+
 
 export default function ProductPage() {
   const { categorySlug } = useParams<{ categorySlug: string }>();
@@ -59,6 +61,7 @@ export default function ProductPage() {
 
   return (
     <main className="max-w-[1200px] mx-auto px-4 py-8 bg-gray-50/50 min-h-screen font-sans antialiased">
+      <AppTaxonomy products={productsToDisplay}/>
       {/* 1. Dynamic Breadcrumbs */}
       <nav className="text-xs md:text-sm text-gray-500 mb-6 flex flex-wrap gap-1 items-center capitalize">
         <Link

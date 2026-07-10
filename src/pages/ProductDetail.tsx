@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getProductBySku } from "../api/productDetail";
+import AppTaxonomy from "../components/AppTaxonomy";
 
 import {
   FaXTwitter,
@@ -101,31 +102,9 @@ export default function ProductDetailPage() {
 
   return (
     <div className="bg-gray-50 min-h-screen text-gray-900 antialiased font-sans">
-      {/* 1. Header Breadcrumbs & Category Bar */}
-      <div className="bg-white border-b border-gray-50">
-        <div className="max-w-[1200px] mx-auto px-4 py-4 flex flex-wrap items-center gap-2 text-sm text-gray-600">
-          <Link to="/" className="hover:text-orange-600 transition">
-            Home
-          </Link>
-          <span>/</span>
-          <Link to="/shop" className="hover:text-orange-600 transition">
-            Shop
-          </Link>
-          <span>/</span>
-          {product.categories?.map((cat: string, idx: number) => (
-            <span key={idx} className="flex items-center gap-2">
-              <span className="capitalize">{cat}</span>
-              {idx < product.categories.length - 1 && <span>/</span>}
-            </span>
-          ))}
-          <span>/</span>
-          <span className="text-gray-400 truncate max-w-[200px]">
-            {product.product_name}
-          </span>
-        </div>
-      </div>
 
       <main className="max-w-[1200px] mx-auto px-4 py-8 md:py-12">
+        <AppTaxonomy products={[product]} />
         {/* 2. Top Section: Core Details Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-16">
           {/* Left Column: Modern Media Gallery */}
