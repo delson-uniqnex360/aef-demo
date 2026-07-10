@@ -93,7 +93,9 @@ export default function MegaMenu() {
     <div className="relative w-full z-50 select-none">
       {/* Level 1 */}
       <nav className="w-full bg-[#14002a] text-white px-4 py-3 border-b border-gray-200">
-        <div className="max-w-[1600px] mx-auto flex items-center gap-8 overflow-x-auto no-scrollbar">
+        {/* Change this line in your Level 1 <nav> container */}
+        <div className="max-w-[1600px] mx-auto flex items-center gap-8 overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+          {" "}
           {menuData.map((mainCat) => {
             const isOpen = activeMain?.id === mainCat.id;
 
