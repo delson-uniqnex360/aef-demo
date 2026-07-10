@@ -42,6 +42,7 @@ export default function CategoryPage() {
 
   // Change 3 & Bug Fix: Pointing to raw data structure (.images array)
   const getDynamicCategoryImage = (obj: any): string => {
+    console.log("ctaegory obj",obj)
     console.log("image obj", obj);
     const fallbackImage =
       "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=500&auto=format&fit=crop";
@@ -200,7 +201,7 @@ export default function CategoryPage() {
       {/* Reused Categories Grid System Design */}
       {itemsToDisplay.length === 0 ? (
         <div className="text-center text-gray-500 py-8">
-          No items found. Open browser console to debug parameters.
+          No items found.
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

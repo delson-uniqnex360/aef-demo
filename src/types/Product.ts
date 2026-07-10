@@ -18,6 +18,7 @@ export type Product = {
   currency: string;
 
   images: string[];
+  category_image?:string;
 
   long_description: string;
 
@@ -48,4 +49,5 @@ export type MainCategory = {
   id: string;
   title: string;
   subCategories: SubCategory[];
+  category_image?: string | null;
 };

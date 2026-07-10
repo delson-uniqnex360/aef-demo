@@ -34,6 +34,10 @@ export default function PopularCategories() {
 
   // Helper function to dig into the data structure and find a valid product image
   const getDynamicCategoryImage = (category: MainCategory): string => {
+    if (category?.category_image) {
+      return category.category_image;
+    }
+
     const firstSub = category.subCategories?.[0];
     const firstGroup = firstSub?.groups?.[0];
     const firstItem = firstGroup?.items?.[0];
@@ -67,34 +71,58 @@ export default function PopularCategories() {
         {categories.map((category) => {
           const imageUrl = getDynamicCategoryImage(category);
 
-          // Generate paths dynamically
           const mainSlug = formatSlug(category.title);
-
           const targetUrl = `/category/${mainSlug}`;
 
-          return (
-            <Link
-              key={category.id}
-              to={targetUrl}
-              className="group flex flex-col bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 decoration-transparent"
-            >
-              {/* Aspect Ratio Cropped Image Frame */}
+          const hasSubCategories =
+            category.subCategories && category.subCategories.length > 0;
+
+          const cardContent = (
+            <>
               <div className="w-full aspect-[4/3] bg-gray-100 overflow-hidden">
                 <img
                   src={imageUrl}
                   alt={category.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className={`w-full h-full object-cover transition-transform duration-500 ${
+                    hasSubCategories ? "group-hover:scale-105" : ""
+                  }`}
                   loading="lazy"
                 />
               </div>
 
-              {/* Centered Deep Purple Typography Label Section */}
               <div className="p-5 text-center bg-white border-t border-gray-50">
-                <h3 className="text-sm md:text-base font-bold text-[#14002a] tracking-wide transition-colors group-hover:text-orange-600">
+                <h3
+                  className={`text-sm md:text-base font-bold tracking-wide ${
+                    hasSubCategories
+                      ? "text-[#14002a] group-hover:text-orange-600"
+                      : "text-gray-500"
+                  }`}
+                >
                   {category.title}
                 </h3>
               </div>
-            </Link>
+            </>
+          );
+
+          if (hasSubCategories) {
+            return (
+              <Link
+                key={category.id}
+                to={targetUrl}
+                className="group flex flex-col bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 decoration-transparent"
+              >
+                {cardContent}
+              </Link>
+            );
+          }
+
+          return (
+            <div
+              key={category.id}
+              className="flex flex-col bg-white border border-gray-100 shadow-sm cursor-default"
+            >
+              {cardContent}
+            </div>
           );
         })}
       </div>

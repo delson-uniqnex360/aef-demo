@@ -1,11 +1,16 @@
 {
   "data": [
     {
+      "categories": ["Handtools"],
+      "category_image": "https://s3-eu-west-1.amazonaws.com/webshop/data/thumbs/29/2965f3cf7401de5cc6cc5f8d0f65f7005b02f638.png"
+    },
+    {
       "sku": "CTDX11",
       "product_name": "Cat Drill Driver DX11 Brushless 18V 2 x 2.0Ah Li-ion Battery's",
       "brand": "Cat",
       "mpn": "CTDX11",
       "categories": ["Powertools & Machines", "Cordless Power Tools", "Drills"],
+      "category_image": "https://s3-eu-west-1.amazonaws.com/webshop/data/thumbs/66/66aa4c63c6161dab0ccfb06761a3f1235df3bf6d.jpg",
       "taxonomy": "Powertools & Machines > Cordless Power Tools > Drills",
       "weight": null,
       "weight_unit": null,
@@ -120,6 +125,7 @@
         "Cordless Power Tools",
         "Grinders"
       ],
+      "category_image": "https://s3-eu-west-1.amazonaws.com/webshop/data/thumbs/66/66aa4c63c6161dab0ccfb06761a3f1235df3bf6d.jpg",
       "taxonomy": "Powertools & Machines > Cordless Power Tools > Grinders",
       "currency": "EUR",
       "images": ["/Image - Download/479.314/1.jpg"],
@@ -195,6 +201,7 @@
         "Cordless Power Tools",
         "Grinders"
       ],
+      "category_image": "https://s3-eu-west-1.amazonaws.com/webshop/data/thumbs/66/66aa4c63c6161dab0ccfb06761a3f1235df3bf6d.jpg",
       "taxonomy": "Powertools & Machines > Cordless Power Tools > Grinders",
       "weight": null,
       "weight_unit": null,
@@ -373,6 +380,7 @@
         "Cordless Power Tools",
         "Vacuum, Extraction & Clenaing"
       ],
+      "category_image": "https://s3-eu-west-1.amazonaws.com/webshop/data/thumbs/66/66aa4c63c6161dab0ccfb06761a3f1235df3bf6d.jpg",
       "taxonomy": "Powertools & Machines > Vacuum, Extraction & Cleaning > Cordless Vacuums",
       "weight": null,
       "weight_unit": null,
@@ -524,6 +532,7 @@
         "Cordless Power Tools",
         "Grinders"
       ],
+      "category_image": "https://s3-eu-west-1.amazonaws.com/webshop/data/thumbs/66/66aa4c63c6161dab0ccfb06761a3f1235df3bf6d.jpg",
       "taxonomy": "Powertools & Machines > Cordless Power Tools > Grinders",
       "weight": null,
       "weight_unit": null,
@@ -641,6 +650,7 @@
       "brand": "Metabo",
       "mpn": "601564500",
       "categories": ["Powertools & Machines", "Air Tools", "Air Guns"],
+      "category_image": "https://s3-eu-west-1.amazonaws.com/webshop/data/thumbs/66/66aa4c63c6161dab0ccfb06761a3f1235df3bf6d.jpg",
       "taxonomy": "Powertools & Machines > Air Tools > Air Guns",
       "weight": null,
       "weight_unit": null,
@@ -710,6 +720,34 @@
           "uom": null
         }
       ]
+    },
+    {
+      "categories": ["Engineering and Cutting Tools"],
+      "category_image": "https://s3-eu-west-1.amazonaws.com/webshop/data/thumbs/d8/d835dfa83170dc618402d6cc6c76dc6b6830ca51.jpg"
+    },
+    {
+      "categories": ["Abrasives"],
+      "category_image": "https://s3-eu-west-1.amazonaws.com/webshop/data/thumbs/df/dfb5db19af152d58c6996aadfa4431f6fa59c0bc.jpg"
+    },
+    {
+      "categories": ["Gas & Water Products"],
+      "category_image": "https://s3-eu-west-1.amazonaws.com/webshop/data/thumbs/25/25a0cc6b54dfdb4f7220467f8514029dfbb53691.png"
+    },
+    {
+      "categories": ["Fasteners & Fixings"],
+      "category_image": "https://s3-eu-west-1.amazonaws.com/webshop/data/thumbs/1e/1e6a0c72a2b62ea6cf8474960c49c6c8180aff37.png"
+    },
+    {
+      "categories": ["Storage & Hardware"],
+      "category_image": "https://s3-eu-west-1.amazonaws.com/webshop/data/thumbs/03/037832dfe2116ab2582807ada68b498642e826c3.png"
+    },
+    {
+      "categories": ["Welding"],
+      "category_image": "https://s3-eu-west-1.amazonaws.com/webshop/data/thumbs/e0/e0404166b4d6dff84aaa9e1a931a5753685d13b5.png"
+    },
+    {
+      "categories": ["Workshop Maintenance & Safety"],
+      "category_image": "https://s3-eu-west-1.amazonaws.com/webshop/data/thumbs/06/06f913027db7e16096abf9f39737b546774abd34.png"
     }
   ]
 }
