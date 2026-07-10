@@ -157,7 +157,7 @@ export default function AppHeader() {
                 My Cart
               </p>
               <p className="text-xs text-gray-300 font-medium">
-                2 item(s) - €48.37
+                0 item(s) - €0
               </p>
             </div>
           </div>
