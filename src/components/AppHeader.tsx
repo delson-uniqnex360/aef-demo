@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function AppHeader() {
   return (
     <header className="w-full bg-[#1d0037] text-white font-sans select-none">
@@ -43,7 +45,10 @@ export default function AppHeader() {
       {/* Main Header Bar */}
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-5 flex items-center justify-between gap-4">
         {/* Brand Logo Component */}
-        <div className="flex items-center space-x-3 shrink-0 cursor-pointer">
+        <Link
+          to="/"
+          className="flex items-center space-x-3 shrink-0 cursor-pointer group"
+        >
           {/* Isometric Layered Icon */}
           <svg
             className="w-16 h-12"
@@ -83,7 +88,7 @@ export default function AppHeader() {
           <span className="text-5xl font-black tracking-tighter text-white lowercase font-sans">
             aef
           </span>
-        </div>
+        </Link>
 
         {/* Search Bar Container */}
         <div className="flex-1 max-w-4xl mx-4">
