@@ -7,8 +7,8 @@
       "mpn": "CTDX11",
       "categories": ["Powertools & Machines", "Cordless Power Tools", "Drills"],
       "taxonomy": "Powertools & Machines > Cordless Power Tools > Drills",
-      "weight": "4.2, 2.4",
-      "weight_unit": "lbs",
+      "weight": null,
+      "weight_unit": null,
       "currency": "EUR",
       "images": [
         "/Image - Download/CTDX11/1.webp",
@@ -374,8 +374,8 @@
         "Vacuum, Extraction & Clenaing"
       ],
       "taxonomy": "Powertools & Machines > Vacuum, Extraction & Cleaning > Cordless Vacuums",
-      "weight": "4.8",
-      "weight_unit": "kg",
+      "weight": null,
+      "weight_unit": null,
       "currency": "EUR",
       "warranty": "1 year manufacturer's warranty",
       "images": [
@@ -642,8 +642,8 @@
       "mpn": "601564500",
       "categories": ["Powertools & Machines", "Air Tools", "Air Guns"],
       "taxonomy": "Powertools & Machines > Air Tools > Air Guns",
-      "weight": "0.78 kg / 1.7 lbs",
-      "weight_unit": "kg / lbs",
+      "weight": null,
+      "weight_unit": null,
       "currency": "EUR",
       "images": [
         "https://be.prod.metabo.com/product/products/8970/image-thumb__8970__product_detail-desktop/0156400S_51_website.cc22bd1e.webp",
