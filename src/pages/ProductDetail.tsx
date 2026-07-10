@@ -2,11 +2,28 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getProductBySku } from "../api/productDetail";
 
+import {
+  FaXTwitter,
+  FaWhatsapp,
+  FaFacebookF,
+  FaRegCopy,
+} from "react-icons/fa6";
+import { MdOutlineEmail, MdShare } from "react-icons/md";
+
+const shareIcons = [
+  { icon: FaXTwitter, name: "X", color: "text-black" },
+  { icon: MdOutlineEmail, name: "Email", color: "text-red-500" },
+  { icon: FaWhatsapp, name: "WhatsApp", color: "text-green-500" },
+  { icon: MdShare, name: "Share", color: "text-blue-500" },
+  { icon: FaRegCopy, name: "Copy Link", color: "text-gray-600" },
+  { icon: FaFacebookF, name: "Facebook", color: "text-blue-600" },
+];
+
 export default function ProductDetailPage() {
   const { sku } = useParams<{ sku: string }>();
-  const [activeTab, setActiveTab] = useState<"description" | "technical">(
-    "description",
-  );
+  const [activeTab, setActiveTab] = useState<
+    "description" | "technical" | "reviews"
+  >("description");
 
   // Asynchronous product states
   const [product, setProduct] = useState<any>(null);
@@ -224,12 +241,21 @@ export default function ProductDetailPage() {
             {/* Modern Native Social Share Layer */}
             <div className="flex items-center gap-2 pt-2 text-gray-500 border-t border-gray-100">
               <span className="text-xs font-semibold mr-2">Share item:</span>
-              {["𝕏", "✉", "💬", "🔗"].map((icon, idx) => (
+              {/* {["𝕏", "📧", "🟢", "↗", "📋", "f"].map((icon, idx) => (
                 <button
                   key={idx}
                   className="w-8 h-8 rounded-lg bg-gray-50 hover:bg-orange-50 hover:text-orange-600 border border-gray-200 flex items-center justify-center transition-colors text-sm"
                 >
                   {icon}
+                </button>
+              ))} */}
+              {shareIcons.map(({ icon: Icon, name, color }) => (
+                <button
+                  key={name}
+                  title={name}
+                  className="w-8 h-8 rounded-lg bg-gray-50 hover:bg-orange-50 border border-gray-200 flex items-center justify-center transition-colors"
+                >
+                  <Icon className={`text-base ${color}`} />
                 </button>
               ))}
             </div>
@@ -248,7 +274,7 @@ export default function ProductDetailPage() {
                   : "border-transparent text-gray-500 hover:text-gray-900 hover:bg-gray-100/50"
               }`}
             >
-              Product Description
+              Product Information
             </button>
             <button
               onClick={() => setActiveTab("technical")}
@@ -260,30 +286,31 @@ export default function ProductDetailPage() {
             >
               Technical Information
             </button>
+            <button
+              onClick={() => setActiveTab("reviews")}
+              className={`px-6 py-3.5 text-sm font-bold tracking-wide rounded-t-xl transition-all border-t-2 -mb-px ${
+                activeTab === "reviews"
+                  ? "bg-white border-orange-600 text-orange-600 shadow-sm"
+                  : "border-transparent text-gray-500 hover:text-gray-900 hover:bg-gray-100/50"
+              }`}
+            >
+              Reviews
+            </button>
           </div>
 
           {/* Panel View Switcher */}
           <div className="p-6 md:p-8 min-h-[250px]">
-            {activeTab === "description" ? (
+            {activeTab === "description" && (
               <div className="space-y-6 max-w-3xl">
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {product.brand} | {product.mpn}
-                  </h3>
-                  <h4 className="text-lg font-semibold text-gray-700 mb-4">
-                    {product.product_name}
-                  </h4>
                   <p className="text-gray-600 leading-relaxed whitespace-pre-line">
                     {product.long_description}
                   </p>
                 </div>
 
-                {/* Features fallback list inside description context */}
                 {product.features && product.features.length > 0 && (
                   <div>
-                    <h5 className="font-bold text-gray-900 mb-3">
-                      Key Highlights:
-                    </h5>
+                    <h5 className="font-bold text-gray-900 mb-3">Features:</h5>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       {product.features.map((feature: string, idx: number) => (
                         <li
@@ -298,24 +325,14 @@ export default function ProductDetailPage() {
                   </div>
                 )}
               </div>
-            ) : (
+            )}
+
+            {activeTab === "technical" && (
               <div className="space-y-8 max-w-4xl">
-                {/* Dynamically Populated Attributes Table */}
                 {product.attributes && product.attributes.length > 0 ? (
                   <div>
-                    <h4 className="text-base font-bold text-gray-900 mb-4">
-                      Specifications
-                    </h4>
                     <div className="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
                       <table className="w-full text-left text-sm border-collapse">
-                        <thead>
-                          <tr className="bg-gray-50 border-b border-gray-200 text-gray-400 font-mono text-[11px] tracking-wider uppercase">
-                            <th className="px-6 py-3 font-semibold">
-                              Parameter
-                            </th>
-                            <th className="px-6 py-3 font-semibold">Value</th>
-                          </tr>
-                        </thead>
                         <tbody className="divide-y divide-gray-100">
                           {product.attributes.map((attr: any, idx: number) => (
                             <tr
@@ -327,17 +344,15 @@ export default function ProductDetailPage() {
                               </td>
                               <td className="px-6 py-4 text-gray-600">
                                 {attr.value ?? "N/A"}{" "}
-                                {attr.uom ? (
+                                {attr.uom && (
                                   <span className="text-xs text-gray-400 ml-0.5">
                                     {attr.uom}
                                   </span>
-                                ) : (
-                                  ""
                                 )}
                               </td>
                             </tr>
                           ))}
-                          {/* Weight and Unit parameters explicitly parsed from root key standard types */}
+
                           {product.weight && (
                             <tr className="hover:bg-gray-50/50 transition-colors">
                               <td className="px-6 py-4 font-semibold text-gray-700">
@@ -361,6 +376,10 @@ export default function ProductDetailPage() {
                   </p>
                 )}
               </div>
+            )}
+
+            {activeTab === "reviews" && (
+              <div className="max-w-4xl py-8">{/* Empty for now */}</div>
             )}
           </div>
         </div>

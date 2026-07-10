@@ -11,6 +11,15 @@
       "weight_unit": "lbs",
       "currency": "USD",
       "images": [
+        "/Image - Download/CTDX11/1.webp",
+        "/Image - Download/CTDX11/2.webp",
+        "/Image - Download/CTDX11/3.webp",
+        "/Image - Download/CTDX11/4.avif",
+        "/Image - Download/CTDX11/5.webp",
+        "/Image - Download/CTDX11/6.avif",
+        "/Image - Download/CTDX11/7.avif",
+        "/Image - Download/CTDX11/8.avif",
+        "/Image - Download/CTDX11/9.avif",
         "https://shopcaterpillar.com/cdn/shop/products/DX112_2000x.jpg?v=1778509361"
       ],
       "long_description": "This 18V Brushless 1/2″ Drill/Driver is built for the job site with a 2 speed gear box delivering 600 in/lbs. of torque with 0-600 RPM and 0-2000 RPM. 1/2″ all-metal ratcheting chuck for improved bit retention, LED light to illuminate darker areas, and ergonomic soft grip handle for a balanced feel. Included are (2) 2.0Ah batteries, 4A Quick charger, removable belt clip, and the only professional tools that come with a stackable storage case. Cat® power tools are backed by a 3 year warranty.",
@@ -311,7 +320,10 @@
       ],
       "taxonomy": "Powertools & Machines > Cordless Power Tools > Grinders",
       "currency": "USD",
-      "images": [],
+      "images": [
+        "/Image - Download/CTDX31B.1/1.png",
+        "/Image - Download/CTDX31B.1/2.png"
+      ],
       "long_description": "The Flex LE 14-11 125 small angle grinder delivers 12 amp corded power with a 5-stage variable speed dial to match RPM to the job. Designed with long-life motor technology and built-in protections including soft start, restart protection, and overload protection, it is a durable option for grinding and cutting applications using 4-1/2 in. to 5 in. wheels.",
       "features": [
         "12 amp small angle grinder for grinding and cutting applications",
@@ -388,7 +400,14 @@
       "weight_unit": "kg",
       "currency": "USD",
       "warranty": "1 year manufacturer's warranty",
-      "images": [],
+      "images": [
+        "/Image - Download/606469390/6.webp",
+        "/Image - Download/606469390/5.webp",
+        "/Image - Download/606469390/4.webp",
+        "/Image - Download/606469390/3.webp",
+        "/Image - Download/606469390/2.webp",
+        "/Image - Download/606469390/1.webp"
+      ],
       "long_description": "Metabo 606469390 W 24-230C MVT 110V 9 In. Angle Grinder (230mm), Deadman's Switch, 2300W is a product engineered with precision, delivering exceptional performance with features like metabo Marathon motor with patented dust protection for long service life, electronic safety shutdown reduces kickback if the disc stops unexpectedly for high user safety and deadman's switch for high user protection.",
       "features": [
         "Metabo Marathon motor with patented dust protection for long service life",
@@ -566,7 +585,9 @@
       "currency": "USD",
       "warranty": "1 year manufacturer's warranty",
       "images": [
-        "https://be.prod.metabo.com/product/products/cas_image_website.png"
+        "/Image - Download/602029850/3.webp",
+        "/Image - Download/602029850/2.webp",
+        "/Image - Download/602029850/1.webp"
       ],
       "long_description": "Equipped with HEPA filter, keeps back 99.95% of fine dusts. PressClean: manual filter cleaning using strong air flow by activating the switch on the extraction unit during breaks. Eco mode for longer runtime per battery pack charge, boost mode for maximum power. With integrated blow function for blowing out, drying and drawing off exhaust air. Dust-proof and splash-proof battery pack compartment with lockable flap.",
       "features": [
@@ -808,6 +829,81 @@
         {
           "name": "Tool-less Adjustable Guard",
           "value": "Tool-free 2in1 Wheel Guard",
+          "uom": null
+        }
+      ]
+    },
+    {
+      "sku": "601564500",
+      "product_name": "Metabo Compressed Air Stapler Gun DKG 80/16",
+      "brand": "Metabo",
+      "mpn": "601564500",
+      "categories": ["Powertools & Machines", "Air Tools", "Air Guns"],
+      "taxonomy": "Powertools & Machines > Air Tools > Air Guns",
+      "weight": "0.78 kg / 1.7 lbs",
+      "weight_unit": "kg / lbs",
+      "currency": "USD",
+      "images": [
+        "https://be.prod.metabo.com/product/products/8970/image-thumb__8970__product_detail-desktop/0156400S_51_website.cc22bd1e.webp",
+        "https://youtu.be/3igpcQ8Gfno"
+      ],
+      "long_description": "The Metabo DKG 80/16 (601564500) is a lightweight pneumatic staple gun designed for fast, accurate fastening in professional woodworking, upholstery, and insulation applications. It is ideal for securing foils, fabrics, insulation materials, and other lightweight materials with consistent performance. Its ergonomic composite housing provides excellent grip, reduced vibration, and thermal insulation, ensuring comfortable operation during extended use.",
+      "features": [
+        "For processing staples",
+        "For fixing liners, materials, insulation material",
+        "Practical and lightweight for easy operation even in difficult to reach places",
+        "Ergonomic composite housing: insulated non-slip and low vibration for comfortable work",
+        "Rubberised handle for ergonomic and fatigue-free operation"
+      ],
+      "attributes": [
+        {
+          "name": "Staple type",
+          "value": "80",
+          "uom": null
+        },
+        {
+          "name": "Staple length",
+          "value": "4 - 16",
+          "uom": "mm"
+        },
+        {
+          "name": "Operating pressure",
+          "value": "5 - 7",
+          "uom": "bar"
+        },
+        {
+          "name": "Air requirement per impact",
+          "value": "0.78",
+          "uom": "kg"
+        },
+        {
+          "name": "EURO Plug-in nipple 1/4 inch",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "ARO/Orion Plug-in nipple 1/4 inch",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "ISO Plug-in nipple 1/4 inch",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Oil bottles",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Safety Goggles",
+          "value": null,
+          "uom": null
+        },
+        {
+          "name": "Plastic carry case",
+          "value": null,
           "uom": null
         }
       ]
