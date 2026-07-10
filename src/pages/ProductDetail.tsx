@@ -22,7 +22,7 @@ const shareIcons = [
 export default function ProductDetailPage() {
   const { sku } = useParams<{ sku: string }>();
   const [activeTab, setActiveTab] = useState<
-    "description" | "technical" | "reviews"
+    "description" | "technical" | "reviews" | "documents"
   >("description");
 
   // Asynchronous product states
@@ -41,6 +41,8 @@ export default function ProductDetailPage() {
 
     loadProduct();
   }, [sku]);
+
+  console.log(" product detail", product);
 
   // Sync selectedMedia once product data is loaded or changes
   useEffect(() => {
@@ -100,7 +102,7 @@ export default function ProductDetailPage() {
   return (
     <div className="bg-gray-50 min-h-screen text-gray-900 antialiased font-sans">
       {/* 1. Header Breadcrumbs & Category Bar */}
-      <div className="bg-white border-b border-gray-200">
+      <div className="bg-white border-b border-gray-50">
         <div className="max-w-[1200px] mx-auto px-4 py-4 flex flex-wrap items-center gap-2 text-sm text-gray-600">
           <Link to="/" className="hover:text-orange-600 transition">
             Home
@@ -128,8 +130,36 @@ export default function ProductDetailPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-16">
           {/* Left Column: Modern Media Gallery */}
           <div className="lg:col-span-7 space-y-4">
-            {/* Main Stage View */}
-            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden aspect-video flex items-center justify-center relative p-6 shadow-sm">
+            {/* Main Stage View with Overlay Navigation Arrows */}
+            <div className="relative group/main bg-white border border-gray-50 rounded-2xl overflow-hidden aspect-video flex items-center justify-center p-6 shadow-sm">
+              {/* Left Arrow Button */}
+              <button
+                onClick={() => {
+                  const currentIndex = product.images.indexOf(selectedMedia);
+                  if (currentIndex > 0) {
+                    setSelectedMedia(product.images[currentIndex - 1]);
+                  }
+                }}
+                disabled={product.images.indexOf(selectedMedia) <= 0}
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/80 backdrop-blur-md border border-gray-50/50 rounded-full shadow-md text-gray-700 opacity-0 group-hover/main:opacity-100 disabled:pointer-events-none disabled:opacity-0 transition-all duration-200 hover:bg-white hover:scale-105 active:scale-95"
+                aria-label="Previous media"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+
+              {/* Media Viewer */}
               {isYouTubeUrl(selectedMedia) ? (
                 <iframe
                   className="w-full h-full rounded-xl"
@@ -145,20 +175,50 @@ export default function ProductDetailPage() {
                   className="max-h-full max-w-full object-contain"
                 />
               )}
+
+              {/* Right Arrow Button */}
+              <button
+                onClick={() => {
+                  const currentIndex = product.images.indexOf(selectedMedia);
+                  if (currentIndex < product.images.length - 1) {
+                    setSelectedMedia(product.images[currentIndex + 1]);
+                  }
+                }}
+                disabled={
+                  product.images.indexOf(selectedMedia) ===
+                  product.images.length - 1
+                }
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-white/80 backdrop-blur-md border border-gray-50/50 rounded-full shadow-md text-gray-700 opacity-0 group-hover/main:opacity-100 disabled:pointer-events-none disabled:opacity-0 transition-all duration-200 hover:bg-white hover:scale-105 active:scale-95"
+                aria-label="Next media"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
             </div>
 
-            {/* Scrollable Thumbnails row */}
-            <div className="flex gap-3 overflow-x-auto pb-2 snap-x scrollbar-thin scrollbar-thumb-gray-300">
+            {/* Scrollable Thumbnails row (Clean & Independent) */}
+            <div className="flex gap-3 overflow-x-auto pb-2 snap-x scrollbar-thin scrollbar-thumb-gray-300 w-full py-0.5">
               {product.images?.map((media: string, index: number) => {
                 const isVideo = isYouTubeUrl(media);
                 return (
                   <button
                     key={index}
                     onClick={() => setSelectedMedia(media)}
-                    className={`w-24 h-20 flex-shrink-0 border-2 rounded-xl overflow-hidden bg-white snap-start relative flex items-center justify-center p-1 transition-all ${
+                    className={`w-24 h-20 flex-shrink-0 border rounded-xl overflow-hidden bg-white snap-start relative flex items-center justify-center p-1 transition-all ${
                       selectedMedia === media
                         ? "border-orange-600 ring-2 ring-orange-100"
-                        : "border-gray-200 hover:border-gray-400"
+                        : "border-gray-50 hover:border-gray-200"
                     }`}
                   >
                     {isVideo ? (
@@ -186,33 +246,38 @@ export default function ProductDetailPage() {
           </div>
 
           {/* Right Column: Checkout Purchase Card & Meta */}
-          <div className="lg:col-span-5 bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-6">
+          <div className="lg:col-span-5 bg-white border border-gray-50 rounded-2xl p-6 md:p-8 shadow-sm space-y-6">
             <div>
               <div className="flex items-center justify-between gap-4 mb-2">
                 <span className="text-sm font-semibold text-orange-600 tracking-wider uppercase">
                   {product.brand}
                 </span>
-                <span className="text-xs font-mono text-gray-400 bg-gray-100 px-2 py-0.5 rounded">
-                  SKU: {product.sku}
-                </span>
               </div>
-              <h1 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight leading-tight">
+              <h1 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight leading-tight text-balance">
                 {product.product_name}
               </h1>
               <p className="text-xs text-gray-400 mt-1">MPN: {product.mpn}</p>
             </div>
 
             {/* Price block */}
-            <div className="border-y border-gray-100 py-4 flex items-baseline gap-1">
-              <span className="text-3xl font-black tracking-tight text-gray-900">
-                {product.currency === "EUR" ? "€" : product.currency || "$"}29
+            <div className="border-y border-gray-50 py-4 flex items-start gap-1">
+              {/* Main Price (Integer) */}
+              <span className="text-3xl font-black tracking-tight text-gray-900 leading-none">
+                {product.currency === "EUR" ? "€" : product.currency || "$"}129
               </span>
-              <span className="text-lg font-bold tracking-tight text-gray-900">
-                .99
-              </span>
-              <span className="text-xs text-gray-400 ml-2 font-medium">
-                incl. VAT
-              </span>
+
+              {/* Column for Superscript Cents and VAT */}
+              <div className="flex flex-col items-start leading-none pt-0.5">
+                {/* Superscript Cents */}
+                <span className="text-sm font-bold tracking-tight text-gray-900">
+                  .99
+                </span>
+
+                {/* VAT Below Cents */}
+                <span className="text-[10px] text-gray-400 font-medium whitespace-nowrap mt-0.5">
+                  incl. VAT
+                </span>
+              </div>
             </div>
 
             {/* Availability */}
@@ -241,19 +306,11 @@ export default function ProductDetailPage() {
             {/* Modern Native Social Share Layer */}
             <div className="flex items-center gap-2 pt-2 text-gray-500 border-t border-gray-100">
               <span className="text-xs font-semibold mr-2">Share item:</span>
-              {/* {["𝕏", "📧", "🟢", "↗", "📋", "f"].map((icon, idx) => (
-                <button
-                  key={idx}
-                  className="w-8 h-8 rounded-lg bg-gray-50 hover:bg-orange-50 hover:text-orange-600 border border-gray-200 flex items-center justify-center transition-colors text-sm"
-                >
-                  {icon}
-                </button>
-              ))} */}
               {shareIcons.map(({ icon: Icon, name, color }) => (
                 <button
                   key={name}
                   title={name}
-                  className="w-8 h-8 rounded-lg bg-gray-50 hover:bg-orange-50 border border-gray-200 flex items-center justify-center transition-colors"
+                  className="w-8 h-8 rounded-lg bg-gray-50 hover:bg-orange-50 border border-gray-50 flex items-center justify-center transition-colors"
                 >
                   <Icon className={`text-base ${color}`} />
                 </button>
@@ -263,9 +320,9 @@ export default function ProductDetailPage() {
         </div>
 
         {/* 3. Bottom Section: Tabbed Content Panels */}
-        <div className="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
+        <div className="bg-white border border-gray-50 rounded-2xl shadow-sm overflow-hidden">
           {/* Tab Selection Header */}
-          <div className="flex border-b border-gray-200 bg-gray-50/70 px-4 pt-2 gap-2">
+          <div className="flex border-b border-gray-50 bg-gray-50/70 px-4 pt-2 gap-2">
             <button
               onClick={() => setActiveTab("description")}
               className={`px-6 py-3.5 text-sm font-bold tracking-wide rounded-t-xl transition-all border-t-2 -mb-px ${
@@ -295,6 +352,16 @@ export default function ProductDetailPage() {
               }`}
             >
               Reviews
+            </button>
+            <button
+              onClick={() => setActiveTab("documents")}
+              className={`px-6 py-3.5 text-sm font-bold tracking-wide rounded-t-xl transition-all border-t-2 -mb-px ${
+                activeTab === "documents"
+                  ? "bg-white border-orange-600 text-orange-600 shadow-sm"
+                  : "border-transparent text-gray-500 hover:text-gray-900 hover:bg-gray-100/50"
+              }`}
+            >
+              Documents
             </button>
           </div>
 
@@ -331,7 +398,7 @@ export default function ProductDetailPage() {
               <div className="space-y-8 max-w-4xl">
                 {product.attributes && product.attributes.length > 0 ? (
                   <div>
-                    <div className="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                    <div className="border border-gray-50 rounded-xl overflow-hidden shadow-sm">
                       <table className="w-full text-left text-sm border-collapse">
                         <tbody className="divide-y divide-gray-100">
                           {product.attributes.map((attr: any, idx: number) => (
@@ -343,7 +410,7 @@ export default function ProductDetailPage() {
                                 {attr.name.replace(/_/g, " ")}
                               </td>
                               <td className="px-6 py-4 text-gray-600">
-                                {attr.value ?? "N/A"}{" "}
+                                {attr.value ?? ""}{" "}
                                 {attr.uom && (
                                   <span className="text-xs text-gray-400 ml-0.5">
                                     {attr.uom}
@@ -380,6 +447,61 @@ export default function ProductDetailPage() {
 
             {activeTab === "reviews" && (
               <div className="max-w-4xl py-8">{/* Empty for now */}</div>
+            )}
+
+            {activeTab === "documents" && (
+              <div className="space-y-6 max-w-4xl">
+                {product.documents && product.documents.length > 0 ? (
+                  <div className="border border-gray-50 rounded-xl overflow-hidden shadow-sm">
+                    <table className="w-full text-left text-sm border-collapse">
+                      <tbody className="divide-y divide-gray-100">
+                        {product.documents.map((doc: string, idx: number) => {
+                          // Extracts the file name from the path string (e.g., "manual.pdf")
+                          const fileName =
+                            doc.split("/").pop() || `Document ${idx + 1}`;
+
+                          return (
+                            <tr
+                              key={idx}
+                              className="hover:bg-gray-50/50 transition-colors"
+                            >
+                              <td className="px-6 py-4 font-medium text-gray-700 truncate max-w-md">
+                                {fileName}
+                              </td>
+                              <td className="px-6 py-4 text-right">
+                                <a
+                                  href={doc}
+                                  download
+                                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-orange-500 hover:text-orange-600 transition-colors"
+                                >
+                                  <svg
+                                    className="w-4 h-4"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    viewBox="0 0 24 24"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                                    />
+                                  </svg>
+                                  Download
+                                </a>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
+                ) : (
+                  <p className="text-sm text-gray-500 italic">
+                    No documents available for this product.
+                  </p>
+                )}
+              </div>
             )}
           </div>
         </div>

@@ -29,7 +29,12 @@ export default function ProductPage() {
       .then((rawData) => {
         const products = Array.isArray(rawData) ? rawData : rawData.data;
         const tree = buildCategoryTree(products ?? []);
-        const result = getProductsByFlexLevel(tree, formatSlug, categorySlug, products);
+        const result = getProductsByFlexLevel(
+          tree,
+          formatSlug,
+          categorySlug,
+          products,
+        );
 
         setProductsToDisplay(result.products);
         setBreadcrumbs(result.breadcrumbs);
@@ -42,7 +47,7 @@ export default function ProductPage() {
       });
   }, [categorySlug]);
 
-  console.log("product to displya", productsToDisplay)
+  console.log("product to displya", productsToDisplay);
 
   if (loading) {
     return (
@@ -149,17 +154,16 @@ export default function ProductPage() {
             const productImg =
               product.images?.[0] ||
               "https://via.placeholder.com/400x300?text=No+Product+Image";
-            const basePrice = product.price ? Math.floor(product.price) : 79;
+            const basePrice = product.price ? Math.floor(product.price) : 129;
             const decimalPrice = product.price
               ? (product.price % 1).toFixed(2).slice(2)
-              : "62";
+              : "99";
 
             const productSku = encodeURIComponent(
-              product.sku?.toString() ||
-                "unknown-sku",
+              product.sku?.toString() || "unknown-sku",
             );
 
-            console.log("proudct", product, productSku)
+            console.log("proudct", product, productSku);
 
             return (
               <div
